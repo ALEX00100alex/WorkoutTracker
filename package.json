@@ -1,0 +1,27 @@
+{
+  "name": "mongoose_skeleton",
+  "version": "1.0.0",
+  "description": "An app to create and track daily workouts, created using a Mongo database with a Mongoose schema and handle routes with Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALEX00100alex/WorkoutTracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ALEX00100alex/WorkoutTracker/issues"
+  },
+  "homepage": "https://github.com/ALEX00100alex/WorkoutTracker#readme"
+}
