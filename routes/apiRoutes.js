@@ -1,10 +1,11 @@
 const Workout = require('../models/workout');
 const mongoose = require('mongoose');
-const express = require("express");
-const app = express();
+const app = require("express").Router();
+
 
 // getLastWorkout
 app.get("/api/workouts", async (req, res) => {
+    console.log("Hello");
     const workouts = await Workout.aggregate([{
         $addFields: {
             totalDuration: { $sum: '$exercises.duration' },
@@ -32,14 +33,18 @@ app.post("/api/workouts/", async (req, res) => {
 
 // getWorkoutsInRange
 app.get("/api/workouts/range", async (req, res) => {
+   try {
+    console.log("range");
     const range = await Workout.aggregate([{
         $addFields: {
             totalDuration: { $sum: '$exercises.duration' },
         },
-        $limit: 7,
     }]);
     console.log(range);
     res.json(range);
+} catch (err) {
+    res.status(400).json( {message: err})
+}
 });
 
 module.exports = app;
