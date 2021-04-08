@@ -13,9 +13,9 @@ THEN they can create or continue a workout<br />
 WHEN a user creates a workout<br />
 THEN they choose from Resistance or Cardio and fill out the required details<br />
 WHEN user wishes to look at their progress <br />
-THEN click on the Dashboard<br />
-WHEN this this is clicked <br />
-User sees pie and chart graphs that track their workout progress<br />
+THEN they click on the Dashboard<br />
+WHEN this is clicked <br />
+User sees pie charts and bar graphs that track their workout progress<br />
 
 ## Screenshots 
 
